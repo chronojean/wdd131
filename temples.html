@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - WDD 131</title>
+    <meta name="description" content="Temple picture album for WDD 131 course">
+    <meta name="author" content="Jean Andrade">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 48rem)">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>Temple Album</h1>
+            <button id="menu-button" aria-label="Open menu">&#9776;</button>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Gallery</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Salt Lake Temple placeholder" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Manti Temple placeholder" loading="lazy">
+                <figcaption>Manti Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="St. George Temple placeholder" loading="lazy">
+                <figcaption>St. George Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Nauvoo Temple placeholder" loading="lazy">
+                <figcaption>Nauvoo Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Logan Temple placeholder" loading="lazy">
+                <figcaption>Logan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Washington D.C. Temple placeholder" loading="lazy">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Oquirrh Mountain Temple placeholder" loading="lazy">
+                <figcaption>Oquirrh Mountain Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Draper Temple placeholder" loading="lazy">
+                <figcaption>Draper Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple-placeholder.jpg" alt="Provo City Center Temple placeholder" loading="lazy">
+                <figcaption>Provo City Center Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Jean Andrade | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* Responsive Desktop CSS for Temple Album */
+
+/* Hide the hamburger button since we have space for the full menu */
+#menu-button {
+    display: none;
+}
+
+/* Show the navigation menu horizontally using Flexbox */
+nav {
+    display: block; /* Override the display: none from mobile */
+    background-color: #172554;
+}
+
+nav ul {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    border-top: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+header h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.header-inner {
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 1200px; /* Expand main container for large screens */
+    padding: 3rem 1.5rem;
+}
+
+/* Update grid layout for main content to have multiple columns */
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}

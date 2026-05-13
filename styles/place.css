@@ -1,0 +1,124 @@
+/* 
+    WDD 131 - Sprint 3 Place Page Styles 
+*/
+
+:root {
+    --primary-color: #fce300; /* Yellow */
+    --secondary-color: #0033a0; /* Blue */
+    --accent-color: #ed1c24; /* Red */
+    --bg-color: #f1f5f9;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+main {
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+
+.hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background-color: #cbd5e1; /* fallback placeholder color */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--accent-color);
+}
+
+section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+section p {
+    margin-bottom: 0.5rem;
+}
+
+/* Weather Icon Mobile */
+.weather-icon-mobile {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.weather-icon-mobile img {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    border-top: 5px solid var(--accent-color);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Wide View (Desktop) Media Query */
+@media (min-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .weather-icon-mobile {
+        display: none; /* Hide SVG in wide view */
+    }
+
+    /* Pseudo-element emoticon for large view */
+    #weather-heading::after {
+        content: " ⛅";
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
+}

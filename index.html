@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Jean Andrade</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course portal for Jean Andrade. Web development projects and assignments.">
+    <meta name="author" content="Jean Andrade">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+            <nav>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+                <a href="#">Final Project</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Jean Andrade</h1>
+        
+        <div class="grid">
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Profile Picture of Jean Andrade placeholder" loading="lazy" width="200" height="200">
+                <p>Welcome to my course portal. Here you will find links to my weekly assignments and projects.</p>
+            </section>
+
+            <section class="card">
+                <h2>Coursework</h2>
+                <img src="images/coursework.jpg" alt="Coursework representation placeholder" loading="lazy" width="200" height="200">
+                <ul class="activity-list">
+                    <li><a href="#">Week 01: Setup & Introduction</a></li>
+                    <li><a href="temples.html">Week 02: Responsive Design & DOM (Picture Album)</a></li>
+                    <li><a href="place.html">Week 03: Responsive Images & Functions (Country Page)</a></li>
+                    <li><a href="#">Week 04: Tables & Lazyloading</a> <span class="badge">Próximamente</span></li>
+                    <li><a href="#">Week 05: Forms & localStorage</a> <span class="badge">Próximamente</span></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentyear"></span> | Jean Andrade | Tu País Aquí</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

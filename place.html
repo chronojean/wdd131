@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuador - WDD 131</title>
+    <meta name="description" content="Information about Ecuador for WDD 131">
+    <meta name="author" content="Jean Andrade">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ecuador</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.jpg">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.jpg">
+                <img src="images/hero-small.jpg" alt="Hero placeholder for Ecuador" width="400" height="250" loading="lazy">
+            </picture>
+        </div>
+
+        <div class="info-grid">
+            <section class="data">
+                <h2>Data</h2>
+                <p><strong>Capital:</strong> Quito</p>
+                <p><strong>Population:</strong> 17.8 million</p>
+                <p><strong>Area:</strong> 283,561 sq km</p>
+                <p><strong>Language:</strong> Spanish</p>
+                <p><strong>Currency:</strong> USD</p>
+                <p><strong>Time Zone:</strong> UTC-5</p>
+            </section>
+
+            <section class="weather">
+                <h2 id="weather-heading">Weather</h2>
+                <div class="weather-icon-mobile">
+                    <!-- Placeholder SVG for mobile -->
+                    <img src="images/weather-icon.svg" alt="Sunny" width="64" height="64" loading="lazy">
+                </div>
+                <p><strong>Temperature:</strong> <span id="temperature">8</span> °C</p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> <span id="windspeed">10</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Jean Andrade | Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
