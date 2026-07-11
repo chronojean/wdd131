@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #003366;
+  --secondary-color: #f4f4f4;
+  --text-color: #333333;
+  --link-color: #0066cc;
+  --nav-bg-color: #002244;
+  --white-color: #ffffff;
+  --shadow-color: #cccccc;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+#course-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--nav-bg-color);
+  padding: 0.5rem;
+}
+
+nav a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card h2 {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.bio-container, .location-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+  .bio-container, .location-container {
+    flex-direction: row;
+  }
+  .bio-container p, .location-container p {
+    flex: 2;
+  }
+  .bio-container img, .location-container figure {
+    flex: 1;
+    max-width: 200px;
+  }
+}
+
+.profile-img, .flag-img {
+  border: 1px solid var(--shadow-color);
+  max-width: 100%;
+  height: auto;
+}
+
+.location-container figure {
+  margin: 0;
+  text-align: center;
+}
+
+.location-container figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.card hr {
+  border: 0;
+  border-top: 1px solid var(--secondary-color);
+  margin: 1.5rem 0;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.card ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}

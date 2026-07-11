@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | Assignment | Home Page</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program/favicon-16x16.png">
+
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css">
+  <script src="https://js-cdn.dynatrace.com/jstag/16294a69b33/bf29241ovs/ca896ddec2fd3e19_complete.js"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span class="active"><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+
+    <h2>W01 Assignment: Home Page</h2>
+
+    <h3>Overview</h3>
+    <p>This assignment allows you to demonstrate your prerequisite knowledge by applying
+      HTML and CSS in the design and development of a home page. In addition, you will need to apply learning activity
+      concepts &ndash; including JavaScript &ndash; to provide some dynamic information to the home page.
+    </p>
+    <h4>Task</h4>
+    <p>Design and develop the following home page as your <code>wdd131</code> course landing page. Use your own content
+      and basic styling.</p>
+
+    <figure>
+      <img src="../images/homepage-example.png" alt="Example Home Page Screenshot">
+      <figcaption>Example Home Page Screenshot</figcaption>
+    </figure>
+
+    <h3>Instructions</h3>
+    <h4 class="step">File and Folder Setup</h4>
+    <ol>
+      <li>In VS Code, open the <strong>wdd131</strong> local repository folder.</li>
+      <li>Create a new page in this root folder named "<strong>index.html</strong>".
+        <div class="callout info">
+          <p>Why is this file named "index.html"?</p>
+          <details>
+            <summary>Check Your Understanding</summary>
+            It's a common convention in web development to name the main entry point of a website or directory
+            "index.html". This convention originated from early web servers, which would automatically serve an
+            "index.html" file when a directory was accessed without specifying a file name.
+          </details>
+        </div>
+      </li>
+      <li>Create new folders (directories) named "<strong>styles</strong>",
+        "<strong>scripts</strong>", and "<strong>images</strong>'. <br>These subfolders, on the
+        repository root directory, will contain the relevant, asset files.
+
+        <div class="callout info">
+          <p>
+            Note that 'directory' and 'folder' essentially have the same meaning. Directory is the more accurate term
+            for file systems while 'folder' 📂 refers to the widely accepted graphical metaphor because of its
+            association with physical files and organization.
+          </p>
+        </div>
+
+      </li>
+      <li>Add a CSS file named "<strong>base.css</strong>" to the <strong>styles</strong> directory. This is your
+        main CSS file.</li>
+      <li>Add a JS file named "<strong>getdates.js</strong>" to the <strong>scripts</strong> directory.</li>
+    </ol>
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>In the <strong>index.html</strong> document, include the:
+        <ul class="check">
+          <li>required <strong>document type</strong> definition</li>
+          <li><strong>html</strong> tag with language attribute</li>
+          <li><strong>head</strong> tag</li>
+          <li><strong>body</strong> tag</li>
+        </ul>
+      </li>
+      <li>In the <code>&lt;head&gt;</code>, include the following elements with appropriate
+        attributes and content:
+        <div class="callout info">Refer to the <a
+            href="https://byui-cse.github.io/cse-ww-program/student/dev-standards.html" target="_blank"
+            rel="noopener">frontend development standards</a> if you need to review any of these
+          <strong>&lt;head&gt;</strong> elements.
+        </div>
+        <ul class="check">
+          <li><strong>meta charset</strong></li>
+          <li><strong>meta viewport</strong></li>
+          <li><strong>title</strong></li>
+          <li><strong>meta description</strong></li>
+          <li><strong>meta author</strong></li>
+        </ul>
+      </li>
+      <li>Set the <code>title</code> content to "<strong>WDD 131 &ndash; Dynamic Web Fundamentals &ndash; <em>Your
+            Name</em></strong>".</li>
+      <li>Phrase the <strong>meta description</strong> that it at least contains the following content:
+        <ul class="check">
+          <li>"WDD 131 &ndash; Dynamic Web Fundamentals"</li>
+          <li>Your full name</li>
+          <li>Keyword summary of the page content</li>
+        </ul>
+      </li>
+      <li>In the <code>&lt;body&gt;</code>, create a layout using a <code>header</code>, a
+        <code>main</code>, and a <code>footer</code> element.
+      </li>
+
+      <li>The <code>&lt;header&gt;</code> element contains:
+        <ul class="check">
+          <li>the page heading text as shown in an <code>&lt;span&gt;</code> tag with an <code>id</code> attribute of
+            "<code>course-title</code>". The content is "<strong>WDD 131 &ndash; Dynamic Web Fundamentals</strong>"</li>
+          <li>a <code>&lt;nav&gt;</code> tag with these four menu links:
+            <ul>
+              <li>Your <strong>LinkedIn</strong> profile page.
+                <div class="callout info">
+                  <p>
+                    If you do not have a free LinkedIn account profile, consider making one or just provide a general
+                    link to LinkedIn.
+                  </p>
+                </div>
+              </li>
+              <li><strong>Canvas</strong> using <code>https://byupw.instructure.com/</code>.</li>
+              <li>Link to a favorite <strong>Scripture</strong> using
+                <code>https://www.churchofjesuschrist.org/study/scriptures</code>
+                <div class="callout reference">
+                  <p>
+                    <strong>Example</strong><br>
+                    <code>https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7</code>
+                  </p>
+                </div>
+              </li>
+              <li><strong>Final Project</strong> folder link (this will be a placeholder for now).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>The <code>&lt;main&gt;</code> element contains the following:
+        <ul class="check">
+          <li>The <code>h1</code> tag with your name as the content.</li>
+          <li>Two <code>section</code> tags each with the class attribute named
+            "<strong>card</strong>". These sections should include a heading, images, and content as shown in the
+            example figure above.
+            <div class="callout warning">
+              <p>In this class, all images must be optimized and must be local (no external, absolute references to
+                images).</p>
+            </div>
+          </li>
+
+        </ul>
+      </li>
+
+      <li>The <code>&lt;footer&gt;</code> has two paragraphs <code>p</code>:
+        <ul class="check">
+          <li>The first paragraph contains the following:
+            <ul>
+              <li>The copyright symbol and current year where the year will be dynamically populated
+                using JavaScript code. Provide a blank <code>&lt;span&gt;</code> tag to do this.
+                <div class="callout reference">
+                  <p>
+                    <strong>Example</strong><br>
+                    <code>&lt;span id="currentyear"&gt;&lt;/span&gt;</code>
+                  </p>
+                </div>
+              </li>
+              <li>Your name.</li>
+              <li>Your state or country.</li>
+            </ul>
+          </li>
+          <li>The second paragraph has an id of "<strong>lastModified</strong>" and will be
+            populated with JavaScript code.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h4 class="step">CSS</h4>
+    <p>Use the external <strong>base.css</strong> file to layout and style the page as shown in the example screenshot
+      above.</p>
+    <ol>
+      <li>Use your color schema and typography choices.
+        <div class="callout info">You are responsible to practice good design principles of alignment, color contrast,
+          proximity, repetition, and usability in all of your work.</div>
+      </li>
+
+      <li>Use the <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts
+          API</a> to select one or two fonts to use on the page.
+        <div class="callout info">
+          <p>If you need help using Google Fonts, watch this demonstration video ▶️ <a
+              href="https://video.byui.edu/media/t/1_5mebvivp" target="_blank" rel="noopener">Google Fonts API</a></p>
+        </div>
+      </li>
+
+      <li>Make the <code>span</code> tag in the <code>header</code> to display as a block,
+        <code>display: block;</code> in order to center the logo and text easily.
+      </li>
+
+      <li>Use <strong>CSS Flex</strong> on the navigation <strong>nav</strong>.
+        <div class="callout info">
+          Demonstration Video: ▶️ <a href="https://video.byui.edu/media/t/1_b7w4k0v0" target="_blank" rel="noopener">CSS
+            Flex Navigation Menu</a><br>
+          CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/azoRxXX" target="_blank" rel="noopener">CSS Flex
+            Menu</a>
+        </div>
+      </li>
+      <li>The navigation must employ a well designed <strong>hover</strong> affect. See the CodePen
+        above for an example.</li>
+
+      <li>The <code>main</code> element has a limited width and is centered on the screen
+        horizontally.</li>
+      <li>Layout the main column cards using <strong>CSS Grid</strong>.</li>
+    </ol>
+
+    <h4 class="step">JavaScript</h4>
+    <ol>
+      <li>Reference the "<strong>getdates.js</strong>" JavaScript file by using a
+        <code>&lt;script&gt;</code>
+        reference in the <strong>head</strong> of the HTML file and using the attribute
+        <code>defer</code>.
+        <div class="callout info">
+          Why is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#Defer" target="_blank"
+            rel="noopener">defer</a> boolean attribute important?<br> How else can we successful
+          reference and employ JavaScript?</div>
+      </li>
+      <li>In <strong>getdates.js</strong>, write JavaScript statements that dynamically output the
+        following:
+        <ul class="check">
+          <li>the copyright year (the current year) in the footer's first paragraph, and
+            <div class="callout info">Note this CodePen ☼ <a href="https://codepen.io/BYU-Idaho/pen/VYZQRma"
+                target="_blank" rel="noopener">JavaScript Date Object</a> summary of using the <code>Date</code> object
+              in different
+              ways.</div>
+          </li>
+          <li>the date the document was last modified in the second paragraph.
+            <div class="callout info">
+              <p>Use the <code>lastModified</code> property of the document object to get this date/time
+                dynamically. An example of this is shown below:
+              <pre><code class="javascript">document.getElementById("lastModified").innerHTML = document.lastModified;</code></pre>
+              </p>
+              <p>Note that <code>document.lastModified</code> returns a simple string in JavaScript. Therefore, you do
+                not need to manipulate its output for this assignment.</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h4 class="step">Testing</h4>
+    <div class="callout info">
+      <p>Demonstration Video: ▶️ <a href="https://www.loom.com/share/f0ef63190bfe429aa608a4966fac92f9" target="_blank"
+          rel="noopener">Testing and auditing your own work</a> </p>
+    </div>
+    <ol>
+      <li>Continuously check your work by rendering the page locally using Live/Five Server in VS Code.</li>
+      <li>
+        <figure class="floatright">
+          <img src="../images/console-error-icon.png" alt="Screenshot of console error icon in DevTools" loading="lazy"
+            width="250">
+        </figure>Use the browser's <strong>DevTools</strong> to check for JavaScript runtime errors
+        in the console or click the red, error icon in the upper right corner of DevTools.
+        <div class="callout info">
+          <p>
+            "DevTools" is an abbreviation for "Developer Tools." It refers to
+            a set of tools or utilities provided by web browsers to help developers debug, profile,
+            and analyze web pages during the development process. The tools are typically accessed by
+            pressing the F12 function key or selecting the menu option for the browser's developer
+            tools.
+          </p>
+        </div>
+      </li>
+
+      <li>Use DevTools <strong><a href="https://developer.chrome.com/docs/devtools/css-overview/" target="_blank"
+            rel="noopener">CSS Overview</a></strong> to check your color contrast.</li>
+      <li>Generate the DevTools <strong>Lighthouse</strong> report and run diagnostics for
+        <strong>Accessibility</strong>, <strong>Best Practices</strong>, and <strong>SEO</strong> in the Desktop view.
+        <div class="callout info">
+          <p>The <strong>DevTools Lighthouse</strong> tool serves as a comprehensive auditing tool
+            integrated into the browser. In this class, you will focus on accessibility, best
+            practices, SEO (Search Engine Optimization), and page weight measured by the total transfer bytes when
+            the page is hard reloaded from an empty cache.</p>
+          <p>For more information, see the <a href="https://developers.google.com/web/tools/lighthouse" target="_blank"
+              rel="noopener">Lighthouse documentation</a>.</p>
+        </div>
+        <div class="callout warning">
+          <p>
+            It is best to test your page in a <strong>Private</strong> or <strong>Incognito</strong> browser window.
+          </p>
+        </div>
+      </li>
+      <li>Hard reload the page using <strong>Empty Cache and Hard Reload</strong> in <strong>DevTools</strong> with the
+        <strong>Network</strong> tab open to view the total transferred bytes at the bottom of the tab. Check that the
+        page is 500 kB or less. Here are some common things to look for if the page is too large:
+        <ul>
+          <li>Make sure that all images are optimized.</li>
+          <li>Do not use third party libraries that bloat your page.</li>
+        </ul>
+
+      </li>
+    </ol>
+    <h3>Submission and Audit</h3>
+    <ol>
+      <li>Commit your local repository and push or upload your work to your GitHub Pages enabled
+        <strong>wdd131</strong> repository on GitHub.
+      </li>
+      <li>Use this &#10004; <a href="https://byui-cse.github.io/wdd-audits/wdd131-w01-homepage.html" target="_blank"
+          rel="noopener">Audit tool</a> to
+        self-check your work for some of the required HTML elements and CSS content. This audit tool is also used as
+        part of the assessment.</li>
+      <li><strong>Share</strong> your work by posting your URL in the course's Microsoft Teams <strong>Week 01
+          Forum</strong> and comment on your peers' work by providing constructive feedback.
+        <div class="callout warning">
+          <p>If you do not see all the channels in the course's <strong>Microsoft Teams</strong>, unhide channels by
+            clicking on the kebab "..." icon next to the team name and selecting "Show" for any hidden channels.</p>
+        </div>
+      </li>
+      <li>Return to Canvas and submit your GitHub Pages enabled URL for <strong>wdd131</strong>.
+        <pre><code class="text">https://your-github-username.github.io/wdd131</code></pre>
+        <div class="callout info">
+          <p>Note that you do not need to include <strong>index.html</strong> in your reference because index.html is
+            the
+            default file retrieved with a folder request.</p>
+        </div>
+
+      </li>
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Week 01 Home</a></span>
+    </nav>
+
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
