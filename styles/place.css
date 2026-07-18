@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #2F4F4F;     /* Dark Slate Gray (Rocas del Tepuy) */
+    --primary-dark: #1a3333;
+    --secondary-color: #556B2F;   /* Dark Olive Green (Selva) */
+    --accent-color: #87CEEB;      /* Sky Blue */
+    --accent-warm: #D4A574;       /* Arena/Roca cálida */
+    --text-color: #2c2c2c;
+    --text-light: #f0f0f0;
+    --background-color: #F5F0E8;  /* Beige cálido */
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --font-main: 'Inter', sans-serif;
+    --radius: 12px;
+    --transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: color var(--transition), background-color var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header-content h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    font-weight: 400;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* ===== INFO GRID ===== */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem 1.8rem;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    font-size: 1.3rem;
+}
+
+/* ===== DATA CARD ===== */
+.data-card ul {
+    list-style-type: none;
+}
+
+.data-card li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f0ece4;
+}
+
+.data-card li:last-child {
+    border-bottom: none;
+}
+
+/* ===== WEATHER CARD ===== */
+.weather-icon-mobile {
+    display: block;
+    margin: 0 auto 1rem auto;
+    color: var(--accent-color);
+}
+
+.weather-card p {
+    margin-bottom: 0.4rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: var(--text-light);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.footer-wireframes {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-wireframes > p {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.wireframe-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.wireframe-thumbnails a {
+    display: inline-block;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.wireframe-thumbnails a:hover {
+    transform: scale(1.08);
+    border-color: var(--accent-color);
+}
+
+.wireframe-thumbnails img {
+    display: block;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#lastModified {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* ===== MEDIA QUERIES - ESCRITORIO ===== */
+@media screen and (min-width: 768px) {
+    .header-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .info-grid {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1;
+    }
+
+    /* Ocultar SVG en escritorio */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Mostrar emoticón vía pseudo-elemento solo en escritorio */
+    .weather-title::after {
+        content: ' ⛅';
+        font-size: 1.2em;
+    }
+}

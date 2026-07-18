@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place: Tepuys of Venezuela</title>
+    <meta name="description" content="Discover the majestic Tepuys of Bolívar State, Venezuela. Geographic data, weather, and wind chill factor.">
+    <meta name="author" content="Your Name">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="place.html" class="active">The Tepuys</a>
+        </nav>
+        <div class="header-content">
+            <h1>The Tepuys of Venezuela</h1>
+            <p class="subtitle">Bolívar State — The oldest mountains on the planet</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/tepuy-large.webp" media="(min-width: 768px)">
+                <img src="images/tepuy-small.webp" alt="Panoramic view of a Tepuy in Bolívar State, Venezuela" width="400" height="300" loading="lazy">
+            </picture>
+        </section>
+
+        <div class="info-grid">
+            <section class="card data-card">
+                <h2>Geographic Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> ~30,000 km²</li>
+                    <li><strong>Population:</strong> 0 (on the summits)</li>
+                    <li><strong>Capital:</strong> Ciudad Bolívar (State)</li>
+                    <li><strong>Languages:</strong> Spanish, Indigenous languages</li>
+                    <li><strong>Currency:</strong> Venezuelan Bolívar</li>
+                    <li><strong>Highest Elevation:</strong> 2,810 m (Roraima)</li>
+                </ul>
+            </section>
+
+            <section class="card weather-card">
+                <h2 class="weather-title">Weather</h2>
+                <div class="weather-icon-container">
+                    <!-- SVG weather icon (cloud with partial sun) - visible only on mobile -->
+                    <svg class="weather-icon-mobile" xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q25-92 100-149t170-57q117 0 198.5 81.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm0-80h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-83 0-141.5 58.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41Zm220-240Z"/>
+                    </svg>
+                </div>
+                <p><strong>Temperature:</strong> <span id="temperature">10</span> °C</p>
+                <p><strong>Condition:</strong> Cloudy</p>
+                <p><strong>Wind:</strong> <span id="windSpeed">15</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windChill"></span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-wireframes">
+            <p>Reference Wireframes:</p>
+            <div class="wireframe-thumbnails">
+                <a href="https://byui-cse.github.io/wdd131-ww-course/images/place-mobile.drawio.png" target="_blank" rel="noopener noreferrer">
+                    <img src="https://byui-cse.github.io/wdd131-ww-course/images/place-mobile.drawio.png" alt="Mobile design wireframe" width="120">
+                </a>
+                <a href="https://byui-cse.github.io/wdd131-ww-course/images/place-wide.drawio.png" target="_blank" rel="noopener noreferrer">
+                    <img src="https://byui-cse.github.io/wdd131-ww-course/images/place-wide.drawio.png" alt="Desktop design wireframe" width="120">
+                </a>
+            </div>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | The Tepuys of Venezuela | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
