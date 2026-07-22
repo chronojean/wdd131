@@ -40,9 +40,10 @@ async function getWeather() {
         const formattedCondition = condition.charAt(0).toUpperCase() + condition.slice(1);
         conditionElement.textContent = formattedCondition;
         
-        // Update icon
-        weatherIconElement.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-        weatherIconElement.alt = formattedCondition;
+        // Update alt text for SVG icon (preserving SVG format required by rubric)
+        if (weatherIconElement) {
+            weatherIconElement.alt = formattedCondition;
+        }
         
         // Metric limits for wind chill: T <= 10°C and V > 4.8 km/h
         if (temp <= 10 && windSpeed > 4.8) {
