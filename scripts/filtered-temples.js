@@ -90,7 +90,7 @@ const temples = [
     dedicated: "2000, August, 20",
     area: 15332,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/caracas-venezuela/400x250/caracas-venezuela-temple-lds-1027056-wallpaper.jpg"
+      "https://www.churchofjesuschrist.org/imgs/5358fcd9eafe59917f2deaccb97c6b6308640b7a/full/640%2C/0/default"
   },
   {
     templeName: "Bogotá Colombia",
@@ -98,7 +98,7 @@ const temples = [
     dedicated: "1999, April, 24",
     area: 53500,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bogota-colombia/400x250/bogota-colombia-temple-lds-249027-wallpaper.jpg"
+      "https://www.churchofjesuschrist.org/imgs/89b209718a7ed41649a497893e240972b7cfd036/full/640%2C/0/default"
   },
   {
     templeName: "San Diego California",
@@ -106,7 +106,7 @@ const temples = [
     dedicated: "1993, April, 25",
     area: 58005,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/400x250/san-diego-california-temple-895765-wallpaper.jpg"
+      "https://www.churchofjesuschrist.org/imgs/9fc6d53550ed3243fb8eca9ebceb284d4865e7db/full/640%2C/0/default"
   }
 ];
 
