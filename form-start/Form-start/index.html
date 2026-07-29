@@ -48,7 +48,7 @@
 <!-- CONTENT HERE -->
 <main>
     <h1>Course Proposal Application</h1>
-        <form action="thanks.html" method="get">
+        <form action="thanks.html" method="get" class="wfl">
             <fieldset>
                 <legend>Applicant Information</legend>
                 <label for="fname">First Name* <input type="text" name="fname" id="fname" required> </label>
@@ -60,9 +60,9 @@
             <fieldset>
                 <legend>Course Information</legend>
                 <div>Audience</div>
-                <label for="beginner"       >Beginner <input type="radio" name="audience" id="beginner" value="beginner" ></label>
-                <label for="intermediate">Intermediate <input type="radio" name="audience" id="intermediate" value="intermediate" ></label>
-                <label for="advanced"       >Advanced <input type="radio" name="audience" id="advanced" value="advanced" ></label>
+                <label for="beginner"       ><input type="radio" name="audience" id="beginner" value="beginner" >Beginner</label>
+                <label for="intermediate"><input type="radio" name="audience" id="intermediate" value="intermediate" >Intermediate</label>
+                <label for="advanced"       ><input type="radio" name="audience" id="advanced" value="advanced" >Advanced</label>
                 <div>Software Needed</div>
                 <label for="editing"><input type="checkbox" name="editing" id="editing" value="yes"> Photo Editing</label>
                 <label for="design"><input type="checkbox" name="design" id="design" value="yes"> Coding</label>
@@ -74,7 +74,7 @@
                 <label for="completeDate">Anticipated Completion Date <input type="date" name="completeDate" id="completeDate"></label>
                 <label for="subject">Course Subject
                     <select name="subject" id="subject">
-                        <option value="" disabled selected>Select an option</option>
+                        <option value="" disabled selected>Select an option &#9662;</option>
                         <optgroup label="Software Development">
                             <option value="software">Software Development</option>
                         </optgroup>
