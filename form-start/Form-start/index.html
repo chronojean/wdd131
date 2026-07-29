@@ -48,7 +48,57 @@
 <!-- CONTENT HERE -->
 <main>
     <h1>Course Proposal Application</h1>
-        
+        <form action="thanks.html" method="get">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label for="fname">First Name* <input type="text" name="fname" id="fname" required> </label>
+                <label for="lname">Last Name* <input type="text" name="lname" id="lname" required> </label>
+                <label for="phone">Phone <input type="tel" name="phone" id="phone" placeholder="+1 123 456 78 90"> </label>
+                <label for="email">Email* <input type="email" name="email" id="email" placeholder="someone@server.com" required> </label>
+                <label for="url">Website <input type="url" name="url" id="url" placeholder="http://"> </label>
+            </fieldset>
+            <fieldset>
+                <legend>Course Information</legend>
+                <div>Audience</div>
+                <label for="beginner"       >Beginner <input type="radio" name="audience" id="beginner" value="beginner" ></label>
+                <label for="intermediate">Intermediate <input type="radio" name="audience" id="intermediate" value="intermediate" ></label>
+                <label for="advanced"       >Advanced <input type="radio" name="audience" id="advanced" value="advanced" ></label>
+                <div>Software Needed</div>
+                <label for="editing"><input type="checkbox" name="editing" id="editing" value="yes"> Photo Editing</label>
+                <label for="design"><input type="checkbox" name="design" id="design" value="yes"> Coding</label>
+                <label for="process"><input type="checkbox" name="process" id="process" value="yes"> Preprocessor</label>
+                <label for="client"><input type="checkbox" name="client" id="client" value="yes"> FTP Client</label>
+            </fieldset>
+            <fieldset>
+                <legend>Funding</legend>
+                <label for="completeDate">Anticipated Completion Date <input type="date" name="completeDate" id="completeDate"></label>
+                <label for="subject">Course Subject
+                    <select name="subject" id="subject">
+                        <option value="" disabled selected>Select an option</option>
+                        <optgroup label="Software Development">
+                            <option value="software">Software Development</option>
+                        </optgroup>
+                        <optgroup label="Creative Professional">
+                            <option value="creative">Creative Professional</option>
+                        </optgroup>
+                        <optgroup label="Information Technology">
+                            <option value="info">Information Technology</option>
+                            <option value="data">Data Professional</option>
+                            <option value="security">Cyber Security</option>
+                        </optgroup>
+                        <optgroup label="Construction and Manufacturing">
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="business">Business Professional</option>
+                        </optgroup>
+                    </select>
+                </label>
+                <label for="authors">How Many Authors <input type="number" name="authors" id="authors" min="0"></label>
+            </fieldset>
+            <input type="submit" value="Propose My Course">
+        </form>
 
           
         
