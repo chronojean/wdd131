@@ -72,6 +72,11 @@ h1 {
   color: var(--primary-color);
 }
 
+header h1 {
+  color: var(--white-color);
+  margin: 0;
+}
+
 .card {
   background-color: var(--white-color);
   border-radius: 8px;
@@ -162,3 +167,206 @@ footer {
 footer p {
   margin: 0.5rem 0;
 }
+
+/* Required note above form */
+.required-note {
+  max-width: 600px;
+  margin: 1rem auto 0;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  grid-column: 1 / -1;
+}
+
+.required-note abbr,
+.wf1 abbr {
+  color: #b00000;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: help;
+  border-bottom: 1px dotted #b00000;
+}
+
+.wf1 .optional {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+
+/* Form & Confirmation Page Styles */
+.wf1 {
+  background-color: var(--white-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  max-width: 600px;
+  margin: 0 auto;
+  grid-column: 1 / -1;
+}
+
+.wf1 label {
+  display: block;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--primary-color);
+}
+
+
+
+.wf1 input[type="text"],
+.wf1 input[type="date"],
+.wf1 select,
+.wf1 textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--shadow-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.wf1 fieldset {
+  border: 1px solid var(--shadow-color);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wf1 legend {
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+}
+
+
+
+/* Star Rating Radio Buttons */
+.rating-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.rating-container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.rating-container label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 0.1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.rating-container label:hover,
+.rating-container label:hover ~ label,
+.rating-container input[type="radio"]:checked ~ label {
+  color: #ffc107;
+}
+
+/* Checkboxes */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  color: var(--text-color);
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--primary-color);
+}
+
+/* Submit Button */
+.wf1 button[type="submit"] {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.wf1 button[type="submit"]:hover,
+.wf1 button[type="submit"]:focus {
+  background-color: #002244;
+  outline: 2px solid #002244;
+  outline-offset: 2px;
+}
+
+/* Confirmation Page Styles */
+.review-confirmation {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: var(--white-color);
+  padding: 2.5rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  grid-column: 1 / -1;
+}
+
+.review-confirmation h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.review-confirmation .counter-box {
+  background-color: var(--secondary-color);
+  border: 2px dashed var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.review-confirmation .counter-box #review-count {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.review-confirmation a.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.review-confirmation a.btn:hover {
+  background-color: #002244;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for submitting your product review - WDD 131 Dynamic Web Fundamentals.">
+    <meta name="author" content="Jean Andrade">
+    <title>Review Confirmation | WDD 131</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <div class="review-confirmation">
+            <h2>Thank You for Your Feedback!</h2>
+            <p>Your product review has been successfully submitted and logged.</p>
+
+            <div class="counter-box">
+                <p>Total Reviews Submitted: <span id="review-count">0</span></p>
+            </div>
+
+            <p><a href="form.html" class="btn">Submit Another Review</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jean Andrade &ndash; WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
