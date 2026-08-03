@@ -193,6 +193,46 @@ footer p {
 }
 
 
+
+/* Field row: relative container for the static arrow */
+.field-row {
+  position: relative;
+}
+
+/* The arrow wrapper — absolutely placed to the right of the form card */
+.field-arrow {
+  position: absolute;
+  right: -52px;          /* sits just outside the form's right edge */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: arrowNudge 1.6s ease-in-out infinite;
+}
+
+/* The SVG arrow itself */
+.field-arrow svg {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(176, 0, 0, 0.3));
+}
+
+/* Subtle left-pointing slide/nudge animation */
+@keyframes arrowNudge {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50%      { transform: translateY(-50%) translateX(-6px); }
+}
+
+
+
+
 /* Form & Confirmation Page Styles */
 .wf1 {
   background-color: var(--white-color);
@@ -202,6 +242,8 @@ footer p {
   max-width: 600px;
   margin: 0 auto;
   grid-column: 1 / -1;
+  position: relative;
+  overflow: visible;
 }
 
 .wf1 label {
